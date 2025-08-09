@@ -15,7 +15,7 @@ export const Header = () => {
     <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-0 sm:px-0 lg:px-0">
         <div className="flex items-center justify-between h-16 pl-0">
-          {/* Left section: Hamburger and Logo */}
+     
           <div className="flex items-center gap-2 pl-0" style={{ position: 'relative', width: '100%' }}>
             <SidebarTrigger className="!block z-[9999] ml-2 pl-0 fixed left-2 top-4">
               <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,16 +37,15 @@ export const Header = () => {
             </button>
           </div>
 
-          {/* Navigation */}
-          {/* Navigation removed: Favorites and Compare are now in the sidebar */}
+     
 
-          {/* Right side actions */}
+          
           <div className="flex items-center gap-4">
-            {/* Theme toggle with border */}
+      
             <div className="border border-muted rounded-lg p-1 flex items-center justify-center bg-background">
               <ThemeToggle />
             </div>
-            {/* Message, Notification, Profile */}
+           
             <button className="p-2 rounded-full hover:bg-muted transition-colors">
               <MessageCircle className="h-6 w-6 text-muted-foreground" />
             </button>

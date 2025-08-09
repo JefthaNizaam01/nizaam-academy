@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/button";
 
 interface StatusFiltersProps {
   activeStatus: string;

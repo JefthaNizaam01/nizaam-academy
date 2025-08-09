@@ -1,3 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <text y=".9em" font-size="90">🎓</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <g>
+    <rect width="64" height="64" rx="12" fill="#f3f4f6"/>
+    <g>
+      <!-- Graduation cap -->
+      <path d="M32 14L8 24l24 10 24-10-24-10zm0 2.7L48.6 24 32 30.3 15.4 24 32 16.7z" fill="#4f46e5"/>
+      <path d="M32 32v10c0 2.2-3.6 4-8 4s-8-1.8-8-4V28" fill="none" stroke="#6366f1" stroke-width="2"/>
+      <circle cx="32" cy="44" r="2" fill="#6366f1"/>
+      <!-- Book base -->
+      <rect x="18" y="44" width="28" height="8" rx="2" fill="#a5b4fc"/>
+      <rect x="20" y="46" width="24" height="4" rx="1" fill="#fff"/>
+    </g>
+  </g>
 </svg>

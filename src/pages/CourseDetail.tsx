@@ -37,7 +37,7 @@ export const CourseDetail = () => {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+      <>
         <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="flex items-center justify-center">
@@ -45,13 +45,13 @@ export const CourseDetail = () => {
             <span className="ml-2">Loading course details...</span>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 
   if (error || !course) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+      <>
         <Header />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-2xl font-bold mb-4">Course Not Found</h1>
@@ -59,7 +59,7 @@ export const CourseDetail = () => {
             Back to Courses
           </Button>
         </div>
-      </div>
+      </>
     );
   }
 
@@ -68,10 +68,10 @@ export const CourseDetail = () => {
     : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
+    <>
       <Header />
-
-
+      
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button
@@ -221,7 +221,7 @@ export const CourseDetail = () => {
           </div>
 
           <div className="lg:col-span-1">
-            <Card className="sticky top-24">
+            <Card className="sticky top-24 card-shadow-glow">
               <CardContent className="p-6">
                 <div className="flex items-center gap-2 mb-4">
                   <span className="text-3xl font-bold">R{course.price}</span>
@@ -297,6 +297,6 @@ export const CourseDetail = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };

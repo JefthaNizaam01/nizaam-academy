@@ -3,11 +3,10 @@ import { CourseCard } from '@/components/CourseCard';
 import { SearchAndFilters } from '@/components/SearchAndFilters';
 import { StatusFilters } from '@/components/StatusFilters';
 import { Header } from '@/components/Header';
-import { AppSidebar } from '@/components/AppSidebar';
 import { useCoursesData } from '@/hooks/useCourses';
 import { CourseFilters } from '@/types/course';
 import { Button } from '@/components/button';
-import { SidebarProvider, SidebarTrigger } from '@/components/sidebar';
+import { SidebarTrigger } from '@/components/sidebar';
 import { Grid, List, Filter, Loader2 } from 'lucide-react';
 
 export const CourseCatalog = () => {
@@ -56,15 +55,11 @@ export const CourseCatalog = () => {
   };
 
   return (
-    <SidebarProvider defaultOpen={false}>
-      <div className="min-h-screen flex w-full bg-gradient-to-br from-gray-50 via-gray-100 to-gray-200">
-        <AppSidebar />
-        
-        <div className="flex-1 flex flex-col">
-          <Header />
-
-          {/* Hero Section */}
-          <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 dark:from-[#4f1d7a] dark:via-[#312e81] dark:to-[#1e3a8a] text-white py-12">
+    <>
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 dark:from-[#4f1d7a] dark:via-[#312e81] dark:to-[#1e3a8a] text-white py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="flex items-center justify-center mb-6">
                 <SidebarTrigger className="absolute left-4 top-4 text-white hover:bg-white/10" />
@@ -213,8 +208,6 @@ export const CourseCatalog = () => {
               </div>
             </div>
           </main>
-        </div>
-      </div>
-    </SidebarProvider>
+    </>
   );
 };

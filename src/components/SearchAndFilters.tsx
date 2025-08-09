@@ -27,7 +27,7 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
 
   return (
     <div className="flex flex-col md:flex-row gap-4 p-4 bg-card rounded-lg border">
-      {/* Search Input */}
+      
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
         <Input
@@ -38,7 +38,7 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
         />
       </div>
 
-      {/* Category Filter */}
+    
       <div className="min-w-[200px]">
         <Select
           value={filters.category}
@@ -57,7 +57,7 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
         </Select>
       </div>
 
-      {/* Difficulty Filter */}
+      
       <div className="min-w-[150px]">
         <Select
           value={filters.difficulty}
@@ -76,7 +76,7 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
         </Select>
       </div>
 
-      {/* Clear Filters Button */}
+     
       {hasActiveFilters && (
         <Button
           variant="outline"

@@ -6,7 +6,7 @@ import { Button } from '@/components/button';
 import { Badge } from '@/components/badge';
 import { Separator } from '@/components/separator';
 import { X, Star, Clock, Users } from 'lucide-react';
-import { HeaderGoBack } from "@/components/HeaderGoBack";
+import { Header } from '@/components/Header';
 
 export const CourseComparison = () => {
   const { state, removeFromComparison, clearComparison } = useCourseContext();
@@ -19,8 +19,9 @@ export const CourseComparison = () => {
 
   if (state.comparison.length === 0) {
     return (
-      <>
-        <HeaderGoBack />
+      <div className="min-h-screen bg-background">
+        <Header />
+        
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="flex items-center justify-between mb-8">
             <div>
@@ -44,29 +45,30 @@ export const CourseComparison = () => {
             </div>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
   return (
-    <>
-      <HeaderGoBack />
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex items-center justify-between mb-8">
-        <div>
-          <h1 className="text-3xl font-bold text-foreground mb-2">
-            Course Comparison
-          </h1>
-          <p className="text-muted-foreground">
-            Compare {comparisonCourses.length} course{comparisonCourses.length !== 1 ? 's' : ''} side by side
-          </p>
-        </div>
-        
-        <Button
-          variant="outline"
-          onClick={clearComparison}
-          className="flex items-center gap-2"
-        >
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center justify-between mb-8">
+          <div>
+            <h1 className="text-3xl font-bold text-foreground mb-2">
+              Course Comparison
+            </h1>
+            <p className="text-muted-foreground">
+              Compare {comparisonCourses.length} course{comparisonCourses.length !== 1 ? 's' : ''} side by side
+            </p>
+          </div>
+          
+          <Button
+            variant="outline"
+            onClick={clearComparison}
+            className="flex items-center gap-2"
+          >
           <X className="h-4 w-4" />
           Clear All
         </Button>
@@ -75,7 +77,7 @@ export const CourseComparison = () => {
       {/* Small cards for each course */}
       <div className="flex flex-wrap gap-4 justify-center mb-8">
         {comparisonCourses.map((course) => (
-          <Card key={course.id} className="w-64 min-w-0 bg-card-gradient shadow-card border-0 p-2 relative">
+          <Card key={course.id} className="w-64 min-w-0 bg-card-gradient shadow-card border-0 p-2 relative card-shadow-glow">
             <Button
               size="sm"
               variant="ghost"
@@ -154,7 +156,7 @@ export const CourseComparison = () => {
           </table>
         </div>
       )}
+      </div>
     </div>
-    </>
   );
 };

@@ -56,7 +56,7 @@ export const CourseCard = ({ course }: CourseCardProps) => {
     : 0;
 
   return (
-    <Card className="group cursor-pointer overflow-hidden bg-card-gradient shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-0">
+    <Card className="group cursor-pointer overflow-hidden bg-card-gradient shadow-card hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 border-0 card-shadow-glow">
       <div className="relative" onClick={handleCardClick}>
         <div className="aspect-video relative overflow-hidden bg-muted">
           <img

@@ -1,11 +1,28 @@
-import { HeaderGoBack } from "@/components/HeaderGoBack";
+import { Header } from "@/components/Header";
+import { Button } from "@/components/button";
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Statistics = () => {
+  const navigate = useNavigate();
+  
   return (
-    <>
-      <HeaderGoBack />
-      <div className="min-h-screen bg-gradient-to-br from-white via-gray-50 to-gray-200 dark:from-[#13131a] dark:via-[#181825] dark:to-[#10101a] flex items-center justify-center p-8">
-        <div className="w-full max-w-7xl bg-white dark:bg-[#181825] rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-8 md:p-12">
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex items-center gap-4 mb-8">
+          <Button
+            variant="ghost"
+            onClick={() => navigate('/')}
+            className="flex items-center gap-2"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            Back to Courses
+          </Button>
+        </div>
+        
+        <div className="bg-white dark:bg-[#181825] rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-8 md:p-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-8 gap-4">
             <h1 className="text-3xl font-bold text-foreground">Statistics</h1>
             <div className="flex gap-2">
@@ -98,6 +115,6 @@ export const Statistics = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };

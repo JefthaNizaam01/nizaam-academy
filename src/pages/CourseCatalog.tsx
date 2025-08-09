@@ -6,8 +6,8 @@ import { Header } from '@/components/Header';
 import { AppSidebar } from '@/components/AppSidebar';
 import { useCoursesData } from '@/hooks/useCourses';
 import { CourseFilters } from '@/types/course';
-import { Button } from '@/components/ui/button';
-import { SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
+import { Button } from '@/components/button';
+import { SidebarProvider, SidebarTrigger } from '@/components/sidebar';
 import { Grid, List, Filter, Loader2 } from 'lucide-react';
 
 export const CourseCatalog = () => {

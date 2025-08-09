@@ -1,8 +1,8 @@
 import { Course } from '@/types/course';
-import { Card, CardContent, CardFooter, CardHeader } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Progress } from '@/components/ui/progress';
+import { Card, CardContent, CardFooter, CardHeader } from '@/components/card';
+import { Badge } from '@/components/badge';
+import { Button } from '@/components/button';
+import { Progress } from '@/components/progress';
 import { Star, Clock, Users, Heart, BarChart3, Play, CheckCircle } from 'lucide-react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';

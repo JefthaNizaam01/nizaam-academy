@@ -16,7 +16,7 @@ interface CourseCardProps {
 export const CourseCard = ({ course }: CourseCardProps) => {
   const navigate = useNavigate();
   const [imageLoaded, setImageLoaded] = useState(false);
-  const { toggleFavorite, addToComparison, isFavorite, isInComparison } = useCourseContext();
+  const { state, toggleFavorite, addToComparison, isFavorite, isInComparison } = useCourseContext();
 
   const handleCardClick = () => {
     navigate(`/course/${course.id}`);
@@ -40,6 +40,12 @@ export const CourseCard = ({ course }: CourseCardProps) => {
         description: "This course is already added to comparison list.",
         variant: "destructive",
         duration: 2000,
+      });
+    } else if (state.comparison.length >= 2) {
+      toast({
+        title: "Only 2 courses can be selected",
+        description: "Remove a course from comparison to add this one.",
+        duration: 3000,
       });
     } else {
       addToComparison(course.id);

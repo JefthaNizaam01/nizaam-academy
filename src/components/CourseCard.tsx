@@ -70,8 +70,8 @@ export const CourseCard = ({ course }: CourseCardProps) => {
             alt={course.title}
             className={`w-full h-full transition-all duration-300 group-hover:scale-105 ${
               imageLoaded ? 'opacity-100' : 'opacity-0'
-            }${(course.id === 2 || course.id === "2" || course.id === 9 || course.id === "9") ? ' object-bottom' : ' object-cover'}`}
-            style={course.id === 12 || course.id === "12" ? { objectPosition: "center 25%" } : {}}
+            }${(course.id === "2" || course.id === "9") ? ' object-bottom' : ' object-cover'}`}
+            style={course.id === "12" ? { objectPosition: "center 25%" } : {}}
             onLoad={() => setImageLoaded(true)}
           />
           {!imageLoaded && (

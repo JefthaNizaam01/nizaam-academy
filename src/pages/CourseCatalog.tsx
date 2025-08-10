@@ -24,7 +24,7 @@ export const CourseCatalog = () => {
   const categories = data?.categories ?? [];
   const difficulties = data?.difficulties ?? [];
 
-  // Local filtering logic
+ 
   const filteredCourses = courses.filter(course => {
     const matchesSearch =
       filters.search === '' ||
@@ -34,13 +34,12 @@ export const CourseCatalog = () => {
       course.tags.some(tag => tag.toLowerCase().includes(filters.search.toLowerCase()));
     const matchesCategory = filters.category === 'All Categories' || course.category === filters.category;
     const matchesDifficulty = filters.difficulty === 'All Levels' || course.difficulty === filters.difficulty;
-    // Mock status filtering (in real app, this would be based on user enrollment data)
+
     const matchesStatus = !filters.status || filters.status === 'All' ||
       (filters.status === 'Active' && Math.random() > 0.3) ||
       (filters.status === 'Completed' && Math.random() > 0.8);
     return matchesSearch && matchesCategory && matchesDifficulty && matchesStatus;
-  });
-
+  })
   const clearFilters = () => {
     setFilters({
       category: 'All Categories',
@@ -58,7 +57,6 @@ export const CourseCatalog = () => {
     <>
       <Header />
       
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 dark:from-[#4f1d7a] dark:via-[#312e81] dark:to-[#1e3a8a] text-white py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
               <div className="flex items-center justify-center mb-6">
@@ -81,10 +79,8 @@ export const CourseCatalog = () => {
             </div>
           </section>
 
-          {/* Main Content */}
           <main className="flex-1 p-6">
             <div className="max-w-7xl mx-auto">
-              {/* Page Header */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
                 <div>
                   <h2 className="text-2xl font-bold text-foreground mb-2">
@@ -144,7 +140,6 @@ export const CourseCatalog = () => {
                 </div>
               </div>
 
-              {/* Search and Filters */}
               <div className="mb-6">
               <SearchAndFilters
                 filters={filters}
@@ -155,13 +150,11 @@ export const CourseCatalog = () => {
               />
               </div>
 
-              {/* Status Filters */}
               <StatusFilters
                 activeStatus={filters.status}
                 onStatusChange={handleStatusChange}
               />
 
-              {/* Course Grid */}
               <div className="w-full">
                 {error ? (
                   <div className="text-center py-12">

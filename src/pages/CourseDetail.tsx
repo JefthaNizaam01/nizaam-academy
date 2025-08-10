@@ -71,7 +71,6 @@ export const CourseDetail = () => {
     <>
       <Header />
       
-      {/* Hero Section */}
       <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Button

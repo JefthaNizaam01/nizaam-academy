@@ -24,7 +24,6 @@ export const Settings = () => {
         </div>
         
         <div className="w-full max-w-5xl flex bg-white dark:bg-[#181825] rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 overflow-hidden">
-          {/* Sidebar */}
           <aside className="w-64 bg-muted dark:bg-[#181825] border-r border-gray-200 dark:border-gray-700 flex flex-col py-8 px-6">
             <h2 className="text-lg font-semibold mb-8 text-foreground">Settings</h2>
             <nav className="flex-1">
@@ -57,7 +56,6 @@ export const Settings = () => {
               </ul>
             </nav>
           </aside>
-          {/* Main Content */}
           <main className="flex-1 p-10">
             <h1 className="text-2xl font-bold mb-6 text-foreground">Personal information</h1>
             <form className="space-y-8">

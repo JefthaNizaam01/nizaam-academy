@@ -74,7 +74,6 @@ export const CourseComparison = () => {
         </Button>
       </div>
 
-      {/* Small cards for each course */}
       <div className="flex flex-wrap gap-4 justify-center mb-8">
         {comparisonCourses.map((course) => (
           <Card key={course.id} className="w-64 min-w-0 bg-card-gradient shadow-card border-0 p-2 relative card-shadow-glow">
@@ -110,7 +109,6 @@ export const CourseComparison = () => {
         ))}
       </div>
 
-      {/* Comparison Table */}
       {comparisonCourses.length >= 2 && (
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white dark:bg-[#181825] rounded-2xl shadow-2xl border border-gray-400 dark:border-gray-700">

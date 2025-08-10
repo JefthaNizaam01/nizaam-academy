@@ -80,7 +80,6 @@ export const CourseCard = ({ course }: CourseCardProps) => {
         </div>
         
         <div className="absolute top-3 right-3 flex gap-2">
-          {/* Favorite button: no gradient, original style */}
           <Button
             size="sm"
             variant="ghost"
@@ -90,7 +89,6 @@ export const CourseCard = ({ course }: CourseCardProps) => {
             <Heart className={`h-4 w-4 ${isFavorite(course.id) ? 'fill-red-500 text-red-500' : 'text-muted-foreground'}`} />
           </Button>
           
-          {/* Compare button: no gradient, original style */}
           <Button
             size="sm"
             variant="ghost"
@@ -192,7 +190,6 @@ export const CourseCard = ({ course }: CourseCardProps) => {
           )}
         </div>
         
-        {/* Main button with subtle purple gradient */}
         <Button 
           size="sm" 
           className="bg-gradient-to-r from-purple-700 to-indigo-600 hover:brightness-110 text-white flex items-center gap-2 transition"

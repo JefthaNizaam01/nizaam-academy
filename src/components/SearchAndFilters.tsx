@@ -84,10 +84,11 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
               variant="ghost"
               onClick={onClearFilters}
               size="sm"
-              className="text-xs text-muted-foreground hover:text-foreground rounded-full"
+              className="text-xs text-muted-foreground hover:text-foreground rounded-full whitespace-nowrap"
             >
               <X className="h-3 w-3 mr-1" />
-              Clear all
+              <span className="hidden sm:inline">Clear all</span>
+              <span className="sm:hidden">Clear</span>
             </Button>
           )}
         </div>
@@ -96,14 +97,14 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
  
       <div className="space-y-2 hidden md:block">
         <h3 className="text-sm font-medium text-muted-foreground">Categories</h3>
-        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
+        <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent touch-pan-x">
           {displayCategories.map((category) => (
             <Badge
               key={category}
               variant={filters.category === category ? "default" : "secondary"}
               className={`
                 px-4 py-2 rounded-full cursor-pointer transition-all duration-200 text-sm whitespace-nowrap flex-shrink-0
-                hover:scale-105 hover:shadow-md
+                hover:scale-105 hover:shadow-md active:scale-95
                 ${filters.category === category 
                   ? 'bg-gradient-to-r from-purple-700 to-indigo-600 text-white shadow-lg border-0' 
                   : 'bg-secondary/50 hover:bg-secondary text-secondary-foreground'

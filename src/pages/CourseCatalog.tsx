@@ -59,9 +59,6 @@ export const CourseCatalog = () => {
       
       <section className="bg-gradient-to-r from-purple-700 via-indigo-800 to-blue-900 dark:from-[#4f1d7a] dark:via-[#312e81] dark:to-[#1e3a8a] text-white py-12">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <div className="flex items-center justify-center mb-6">
-                <SidebarTrigger className="absolute left-4 top-4 text-white hover:bg-white/10" />
-              </div>
               <h1 className="text-3xl md:text-5xl font-bold mb-4">
                 Learn Without Limits
               </h1>
@@ -79,7 +76,7 @@ export const CourseCatalog = () => {
             </div>
           </section>
 
-          <main className="flex-1 p-6">
+          <main className="flex-1 p-4 md:p-6">
             <div className="max-w-7xl mx-auto">
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
                 <div>
@@ -140,7 +137,7 @@ export const CourseCatalog = () => {
                 </div>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-6 bg-card/50 rounded-xl p-4 border border-border/50 backdrop-blur-sm">
               <SearchAndFilters
                 filters={filters}
                 onFiltersChange={setFilters}

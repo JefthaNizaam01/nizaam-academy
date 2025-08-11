@@ -20,8 +20,8 @@ export function AppSidebar() {
     <Sidebar collapsible="offcanvas">
       <SidebarContent className="flex flex-col h-full bg-white dark:bg-[#181825] border-r shadow-lg z-40">
         <div className="flex items-center h-16 px-6 border-b border-muted relative">
-          <SidebarTrigger className="fixed left-1/2 top-2 -translate-x-1/2 z-[9999] !block" />
-          <span className="text-2xl font-bold tracking-tight text-primary ml-8 md:ml-0">Nizaam's Academy</span>
+          <SidebarTrigger className="md:hidden absolute left-4 top-1/2 -translate-y-1/2 z-50" />
+          <span className="text-2xl font-bold tracking-tight text-primary ml-12 md:ml-0">Nizaam's Academy</span>
         </div>
         <nav className="flex-1 px-4 py-8 overflow-y-auto">
           <ul className="space-y-2">

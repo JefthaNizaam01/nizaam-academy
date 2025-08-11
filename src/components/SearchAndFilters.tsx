@@ -60,6 +60,25 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
             </Select>
           </div>
           
+   
+          <div className="min-w-[150px] md:hidden">
+            <Select
+              value={filters.category}
+              onValueChange={(value) => onFiltersChange({ ...filters, category: value })}
+            >
+              <SelectTrigger className="rounded-full">
+                <SelectValue placeholder="Category" />
+              </SelectTrigger>
+              <SelectContent>
+                {categories.map((category) => (
+                  <SelectItem key={category} value={category}>
+                    {category}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          
           {hasActiveFilters && (
             <Button
               variant="ghost"
@@ -74,7 +93,8 @@ export const SearchAndFilters = ({ filters, onFiltersChange, onClearFilters, cat
         </div>
       </div>
 
-      <div className="space-y-2">
+ 
+      <div className="space-y-2 hidden md:block">
         <h3 className="text-sm font-medium text-muted-foreground">Categories</h3>
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-muted-foreground/20 scrollbar-track-transparent">
           {displayCategories.map((category) => (

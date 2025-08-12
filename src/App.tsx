@@ -11,7 +11,6 @@ import { CourseComparison } from "./components/CourseComparison";
 import { CourseOverview } from "./pages/CourseOverview";
 import { Statistics } from "./pages/Statistics";
 import { Settings } from "./pages/Settings";
-// import NotFound from "./pages/NotFound";
 import { MainLayout } from "./pages/MainLayout";
 import { ThemeProvider } from "@/lib/theme-provider";
 
@@ -34,8 +33,6 @@ const App = () => (
               <Route path="/settings" element={<Settings />} />
               <Route path="/course/:courseId" element={<CourseDetail />} />
             </Route>
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </TooltipProvider>
       </CourseProvider>

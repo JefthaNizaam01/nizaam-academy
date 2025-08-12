@@ -1,11 +1,10 @@
 import { useCourseContext } from '@/context/CourseContext';
 import { useCoursesData } from '@/hooks/useCourses';
 import { Course } from '@/types/course';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/card';
+import { Card} from '@/components/card';
 import { Button } from '@/components/button';
 import { Badge } from '@/components/badge';
-import { Separator } from '@/components/separator';
-import { X, Star, Clock, Users } from 'lucide-react';
+import { X, Star} from 'lucide-react';
 import { Header } from '@/components/Header';
 
 export const CourseComparison = () => {

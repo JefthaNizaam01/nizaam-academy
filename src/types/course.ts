@@ -14,7 +14,7 @@ export interface Course {
   tags: string[];
   enrollment: number;
   lastUpdated: string;
-  progress?: number; // Progress percentage (0-100)
+  progress?: number; 
   isEnrolled?: boolean;
   completedLessons?: number;
   totalLessons?: number;

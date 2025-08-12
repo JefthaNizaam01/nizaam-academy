@@ -30,7 +30,7 @@ export const CourseDetail = () => {
   const { data, isLoading, error } = useCoursesData();
   const course = data?.courses.find(c => c.id === courseId);
 
-  // Scroll to top on mount
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
